@@ -23,15 +23,18 @@ export class Home extends React.Component {
     render () {
         const {loading, properties} = this.state
         return (
-            <Banner />,  
-            loading ?
-                <Loader />
+            <>
+            <Banner>
+                <h1 className="banner__title">Chez vous, partout et ailleurs</h1>
+            </Banner>
+            {loading ? <Loader /> 
             : <main className="gallery">
                 {properties.map(property => (
-                    <Card key={property.id} img={property.cover} title={property.title} />
+                    <Card key={property.id} img={property.cover} title={property.title} id={property.id} />
                 ))}
-            </main>
-
+            </main>}
+            </>
+            
         );
     }
 }
