@@ -1,0 +1,122 @@
+.accordion {
+    max-width: 100%;
+    margin: 20px;
+    cursor: pointer;
+
+    &.small {
+        margin: 20px 0;
+    }
+
+    &__header {
+        position: relative;
+        z-index: 100;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: $color-primary;
+        padding: 6px 10px;
+        border-radius: 5px;
+    }
+
+    &__title {
+        color: #ffffff;
+        font-size: 1.3rem;
+        font-weight: 500;
+    }
+
+    &__body {
+        margin-top: -5px;
+        padding: 20px 10px;
+        border-end-start-radius: 5px;
+        border-end-end-radius: 5px;
+        color: $color-primary;
+        background: $color-secondary;
+        
+        & p {
+            font-size: 1.2rem;
+            line-height: 1.7rem;
+        }
+    }
+
+    &__arrowTop,
+    &__arrowBottom {
+        height: 10px;
+        width: 15px;
+    }
+}
+
+@media only screen and (min-width: 800px) {
+    .accordion {
+        margin: 30px 150px;
+
+        &.small {
+            margin: 25px 0;
+            margin-right: 40px;
+            min-width: calc(50% - 20px);
+        }
+
+        &.double {
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+        }
+
+        &__header {
+            padding: 7px 14px; 
+        }
+
+        &__title {
+            font-size: 1.8rem;
+        }
+
+        &__body {
+            padding: 25px 15px;
+        }
+
+        & p {
+            font-size: 1.8rem;
+            line-height: 2.8rem;
+        }
+
+        &__arrowTop,
+        &__arrowBottom {
+            height: 15px;
+            width: 17px;
+        }
+    }
+}
+
+@media only screen and (min-width: 1500px) {
+    .accordion {
+        margin: 30px 200px;
+
+        &.small {
+            margin: 30px 0;
+            margin-right: 70px;
+            min-width: calc(50% - 35px);
+        }
+
+        &__header {
+            padding: 8px 16px; 
+        }
+
+        &__title {
+            font-size: 2.4rem;
+        }
+
+        &__body {
+            padding: 30px 20px;
+        }
+
+        & p {
+            font-size: 2.4rem;
+            line-height: 3.4rem;
+        }
+
+        &__arrowTop,
+        &__arrowBottom {
+            height: 24px;
+            width: 20px;
+        }
+    }
+}

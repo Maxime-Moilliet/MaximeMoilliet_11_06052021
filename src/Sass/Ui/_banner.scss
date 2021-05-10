@@ -20,6 +20,10 @@
         font-weight: 500;
         padding: 30px 16px;
     }
+
+    &__title.Fake {
+        color: transparent;
+    }
 }
 
 @media only screen and (min-width: 800px) {
