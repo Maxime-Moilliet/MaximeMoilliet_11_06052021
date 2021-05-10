@@ -5,10 +5,11 @@ import { Banner } from '../Ui/Banner';
 export class About extends React.Component {
     render () {
         return (
+            <>
+            <Banner image="about">
+                <h1 className="banner__title Fake">a</h1>
+            </Banner>
             <main>
-                <Banner image="about">
-                    <h1 className="banner__title Fake">a</h1>
-                </Banner>
                 <Accordion title="Fiabilité" isOpen="true">
                     <p>Les annonces postées sur Kasa garantissent une fiabilité totale.
                     Les photos sont conformes aux logements, et toutes les informations sont 
@@ -31,6 +32,7 @@ export class About extends React.Component {
                     organisons également des ateliers sur la sécurité domestique pour nos hôtes.</p>
                 </Accordion>
             </main>
+            </>
         );
     }
 }

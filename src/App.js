@@ -4,6 +4,7 @@ import { Home } from './Components/Home';
 import { Footer } from './Components/Base/Footer';
 import { Header } from './Components/Base/Header';
 import { About } from './Components/About';
+import  PropertyDetails  from './Components/PropertyDetails';
 
 export default function App () {
   return (
@@ -14,6 +15,7 @@ export default function App () {
       <Switch>
         <Route exact path='/' component={Home} />
         <Route exact path='/about' component={About} />
+        <Route exact path ='/property/:id' component={PropertyDetails} />
       </Switch>
 
       <Footer />
