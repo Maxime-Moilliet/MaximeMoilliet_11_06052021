@@ -1,5 +1,4 @@
 .propertyCard {
-   
     position: relative;
     width: 340px;
     height: 255px;
@@ -27,6 +26,13 @@
         right: 20px;
         z-index: 100;
     }   
+}
+
+@media only screen and (max-width: 400px) {
+    .propertyCard {
+        width: 280px;
+        height: 230px;
+    }
 }
 
 @media only screen and (min-width: 800px) {
