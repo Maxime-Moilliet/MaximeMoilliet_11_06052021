@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import { ArrowLeft, ArrowRight } from './Icon';
 
 
-let length = null;
 export class ImageSlider extends React.Component {
     
     constructor(props) {
@@ -17,18 +16,17 @@ export class ImageSlider extends React.Component {
     }
     
     componentDidMount () {
-        length = this.props.pictures.length;
-        if(length <= 1) {
+        if(this.props.pictures.length <= 1) {
             this.setState({...this.state, navigation: false});
         }
     }
     
     nextSlide () {
-        this.setState({current: this.state.current === length - 1 ? 0 : this.state.current + 1});
+        this.setState({current: this.state.current === this.props.pictures.length  - 1 ? 0 : this.state.current + 1});
     }
     
     prevSlide () {
-        this.setState({current: this.state.current === 0 ? length - 1 : this.state.current - 1});
+        this.setState({current: this.state.current === 0 ? this.props.pictures.length  - 1 : this.state.current - 1});
     }
     
     render () {
@@ -40,7 +38,7 @@ export class ImageSlider extends React.Component {
                     <ArrowLeft onHandleClick={this.prevSlide} />
                     <ArrowRight onHandleClick={this.nextSlide} /></>
                 }
-                {pictures && navigation && <span className="imageSlider__count">{current + 1}/{length}</span>}
+                {pictures && navigation && <span className="imageSlider__count">{current + 1}/{this.props.pictures.length}</span>}
                 {pictures.map((picture, index) => (
                     index === current && <div className="imageSlider__slide" key={index}>
                         <img className="imageSlider__image" src={picture} alt="image du bien" />

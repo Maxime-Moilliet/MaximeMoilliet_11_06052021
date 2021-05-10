@@ -1,13 +1,13 @@
 .accordion {
     max-width: 100%;
     margin: 20px;
-    cursor: pointer;
 
     &.small {
         margin: 20px 0;
     }
 
     &__header {
+        cursor: pointer;
         position: relative;
         z-index: 100;
         display: flex;
@@ -32,9 +32,13 @@
         color: $color-primary;
         background: $color-secondary;
         
-        & p {
+        & p,
+        & li {
             font-size: 1.2rem;
             line-height: 1.7rem;
+        }
+        & ul > * + * {
+            margin-top: 5px;
         }
     }
 
@@ -56,9 +60,10 @@
         }
 
         &.double {
+            margin: 30px 60px;
             display: flex;
             align-items: flex-start;
-            justify-content: flex-start;
+            justify-content: space-between;
         }
 
         &__header {
@@ -73,9 +78,13 @@
             padding: 25px 15px;
         }
 
-        & p {
+        & p,
+        & li {
             font-size: 1.8rem;
             line-height: 2.8rem;
+        }
+        & ul > * + * {
+            margin-top: 10px;
         }
 
         &__arrowTop,
@@ -96,6 +105,10 @@
             min-width: calc(50% - 35px);
         }
 
+        &.double {
+            margin: 30px 100px;
+        }
+
         &__header {
             padding: 8px 16px; 
         }
@@ -108,9 +121,13 @@
             padding: 30px 20px;
         }
 
-        & p {
+        & p,
+        & li {
             font-size: 2.4rem;
             line-height: 3.4rem;
+        }
+        & ul > * + * {
+            margin-top: 15px;
         }
 
         &__arrowTop,
