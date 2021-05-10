@@ -1,0 +1,123 @@
+.imageSlider {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    overflow: hidden;
+    
+    &__image {
+        border-radius: 25px;
+        min-width: 1600px;
+        height: 255px;
+        border-radius: 10px;
+        object-fit: cover;
+    }
+
+    &__arrowLeft,
+    &__arrowRight {
+        width: 12px;
+        height: 20px;
+        z-index: 10;
+        top: 50%;
+        transform: translateY(-50%);
+        position: absolute;
+        cursor: pointer;
+        user-select: none;
+    }
+
+    &__arrowRight {
+        right: 10px;
+    }
+
+    &__arrowLeft {
+        left: 10px;
+    }
+
+    &__slide {
+        animation-name: appearSlide;
+        animation-duration: 1s;
+        animation-fill-mode: both;
+    }
+}
+
+@media only screen and (min-width: 800px) {
+    .imageSlider {
+        margin-right: 60px;
+        margin-left: 60px;
+        margin-bottom: 20px;
+        border-radius: 20px;
+
+        &__image {
+            height: 330px;
+        }
+
+        &__arrowLeft,
+        &__arrowRight {
+            width: 25px;
+            height: 50px;
+        }
+
+        &__arrowRight {
+            right: 20px;
+        }
+
+        &__arrowLeft {
+            left: 20px;
+        }
+
+        &__count {
+            color: #ffffff;
+            position: absolute;
+            font-size: 1.5rem;
+            font-weight: 500;
+            z-index: 10;
+            bottom: 15px;
+        }
+    }
+}
+
+@media only screen and (min-width: 1500px) {
+    .imageSlider {
+        max-width: 100%;
+        margin-right: 100px;
+        margin-left: 100px;
+        margin-bottom: 30px;
+        border-radius: 25px;
+
+        &__image {
+            height: 415px;
+        }
+
+        &__arrowLeft,
+        &__arrowRight {
+            width: 47px;
+            height: 79px;
+        }
+
+        &__arrowRight {
+            right: 40px;
+        }
+
+        &__arrowLeft {
+            left: 40px;
+        }
+
+        &__count {
+            font-size: 1.8rem;
+            font-weight: 500;
+        }
+    }
+}
+
+@keyframes appearSlide {
+    from{opacity: 0;
+        transform: scale(1);
+    }
+    to{opacity: 1;
+        transform: scale(1.08);
+    }
+}

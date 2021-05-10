@@ -1,5 +1,6 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
+import { ImageSlider } from '../Ui/ImageSlider';
 import { Loader } from '../Ui/Loader';
 import { getOnePropertyById } from '../Utils/api';
 
@@ -25,13 +26,14 @@ class PropertyDetails extends React.Component {
     }
 
     render () {
-        console.log(this.state);
         const { loading, property} = this.state;
         return (
             <>
             {loading ? <Loader />
             : <main>
-                {property && property[0].id}
+                {property && <>
+                    <ImageSlider pictures={property[0].pictures}/>
+                </>}
             </main>
             }
             </>
