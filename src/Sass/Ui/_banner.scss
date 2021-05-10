@@ -9,6 +9,12 @@
     background-repeat: no-repeat;
     background-size: cover;
 
+    &.about {
+        background: linear-gradient(to bottom, #838383, transparent), url("../../images/banner-about.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
     
     &__title {
         display: flex;
@@ -20,8 +26,9 @@
         font-weight: 500;
         padding: 30px 16px;
     }
-
+    
     &__title.Fake {
+        user-select: none;
         color: transparent;
     }
 }

@@ -5,7 +5,7 @@ export class Banner extends React.Component {
     render() {
         const { children, image } = this.props
         return (
-            <section className="banner" style={{backgroundImage: `"url("${image}")"`}}>
+            <section className={image === "home" ? "banner" : "banner about"}>
                 {children}
             </section>
         );
@@ -13,6 +13,6 @@ export class Banner extends React.Component {
 }
 
 Banner.propTypes = {
-    children: PropTypes.node,
+    children: PropTypes.node.isRequired,
     image: PropTypes.string.isRequired,
 }

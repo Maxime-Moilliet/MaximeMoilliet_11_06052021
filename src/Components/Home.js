@@ -24,7 +24,7 @@ export class Home extends React.Component {
         const {loading, properties} = this.state
         return (
             <>
-            <Banner image="../../images/banner.png">
+            <Banner image="home">
                 <h1 className="banner__title">Chez vous, partout et ailleurs</h1>
             </Banner>
             {loading ? <Loader /> 

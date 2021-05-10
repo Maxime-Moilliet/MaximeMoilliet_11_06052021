@@ -6,8 +6,8 @@ export class About extends React.Component {
     render () {
         return (
             <main>
-                <Banner image="../../images/banner-about.jpg">
-                    <span className="banner__title Fake"></span>
+                <Banner image="about">
+                    <h1 className="banner__title Fake">a</h1>
                 </Banner>
                 <Accordion title="Fiabilité" isOpen="true">
                     <p>Les annonces postées sur Kasa garantissent une fiabilité totale.
