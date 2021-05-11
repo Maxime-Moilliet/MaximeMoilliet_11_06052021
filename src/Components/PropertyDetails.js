@@ -54,7 +54,7 @@ class PropertyDetails extends React.Component {
                             <Stars count={property[0].rating} />
                             <div className="property__profile">
                                 <h3 className="property__profile-name" dangerouslySetInnerHTML={htmlContent}></h3>
-                                <img className="property__profile-image" src={property[0].host.picture} alt="photo du propriétaire"/>
+                                <img className="property__profile-image" src={property[0].host.picture} alt={`${property[0].host.name}`}/>
                             </div>
                         </div>
                     </section>

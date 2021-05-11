@@ -41,7 +41,7 @@ export class ImageSlider extends React.Component {
                 {pictures && navigation && <span className="imageSlider__count">{current + 1}/{this.props.pictures.length}</span>}
                 {pictures.map((picture, index) => (
                     index === current && <div className="imageSlider__slide" key={index}>
-                        <img className="imageSlider__image" src={picture} alt="image du bien" />
+                        <img className="imageSlider__image" src={picture} alt={`${index}`} />
                     </div>
                 ))}
             </section>
