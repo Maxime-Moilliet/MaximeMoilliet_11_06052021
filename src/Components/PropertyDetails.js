@@ -3,6 +3,7 @@ import { withRouter } from 'react-router-dom';
 import { Accordion } from '../Ui/Accordion';
 import { ImageSlider } from '../Ui/ImageSlider';
 import { Loader } from '../Ui/Loader';
+import { Stars } from '../Ui/Stars';
 import { getOnePropertyById } from '../Utils/api';
 
 
@@ -28,13 +29,18 @@ class PropertyDetails extends React.Component {
 
     render () {
         const { loading, property} = this.state;
+        let htmlContent = null;
+        if(this.state.property) {
+            htmlContent = { __html: property[0].host.name.split(" ").join('<br />') }
+        }
+    
         return (
             <>
             {loading ? <Loader />
             : <main>
                 {property && <>
                     <ImageSlider pictures={property[0].pictures}/>
-                    <section className="property__content">
+                    <section className="property">
                         <div className="property__content-left">
                             <h1 className="property__title">{property[0].title}</h1>
                             <p className="property__location">{property[0].location}</p>
@@ -45,7 +51,11 @@ class PropertyDetails extends React.Component {
                             </ul>
                         </div>
                         <div className="property__content-right">
-
+                            <Stars count={property[0].rating} />
+                            <div className="property__profile">
+                                <h3 className="property__profile-name" dangerouslySetInnerHTML={htmlContent}></h3>
+                                <img className="property__profile-image" src={property[0].host.picture} alt="photo du propriétaire"/>
+                            </div>
                         </div>
                     </section>
                     <section className="accordion double">

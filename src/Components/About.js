@@ -7,7 +7,7 @@ export class About extends React.Component {
         return (
             <>
             <Banner image="about">
-                <h1 className="banner__title Fake">a</h1>
+                <h1 className="banner__title Fake">Banner à propos</h1>
             </Banner>
             <main>
                 <Accordion title="Fiabilité" isOpen="true">
