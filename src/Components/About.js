@@ -9,8 +9,8 @@ export class About extends React.Component {
             <Banner image="about">
                 <h1 className="banner__title Fake">Banner à propos</h1>
             </Banner>
-            <main>
-                <Accordion title="Fiabilité" isOpen="true">
+            <main className="accordion__group">
+                <Accordion title="Fiabilité">
                     <p>Les annonces postées sur Kasa garantissent une fiabilité totale.
                     Les photos sont conformes aux logements, et toutes les informations sont 
                     régulièrements vérifiées par nos équipes.</p>
@@ -20,11 +20,11 @@ export class About extends React.Component {
                     comportement discriminatoire ou de pertubation du voisinage entrainera 
                     une exclusion de notre plateforme.</p>
                 </Accordion>
-                <Accordion title="Service" isOpen="true">
+                <Accordion title="Service">
                     <p>Nos équipes se tiennent à votre disposition pour vous fournir une expérience 
                     parfaite. N'hésitez pas à nous contacter si vous avez la moindre question.</p>
                 </Accordion>
-                <Accordion title="Sécurité" isOpen="true">
+                <Accordion title="Sécurité">
                     <p>La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes que pour
                     les voyageurs, chaque logement correspond aux critères de sécurité établis par 
                     nos services. En laissant une note aussi bien à l'hôte qu'au locataire, cela

@@ -27,8 +27,10 @@
         position: absolute;
         cursor: pointer;
         user-select: none;
-    }
+        color: #ffffff;
 
+    }
+    
     &__arrowRight {
         right: 10px;
     }
