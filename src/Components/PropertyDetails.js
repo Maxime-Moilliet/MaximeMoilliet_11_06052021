@@ -59,10 +59,10 @@ class PropertyDetails extends React.Component {
                         </div>
                     </section>
                     <section className="accordion double">
-                        <Accordion title="Description" isOpen="true" size="small">
+                        <Accordion title="Description" size="small">
                             <p>{property[0].description}</p>
                         </Accordion>
-                        <Accordion title="Description" isOpen="true" size="small">
+                        <Accordion title="Description" size="small">
                             <ul>
                                 {property[0].equipments.map((equipment, index) => (
                                     <li key={index}>{equipment}</li>
