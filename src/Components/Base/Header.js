@@ -6,7 +6,7 @@ export class Header extends React.Component {
         return (
             <header className="header">
                 <Link to="/">
-                    <img src="./images/logo.png" className="header__img" alt="Logo Kasa"/>
+                    <img src="/images/logo.png" className="header__img" alt="Logo Kasa"/>
                 </Link>
                 <nav className="header__nav">
                     <NavLink exact activeClassName="active" className="header__link" to="/">
