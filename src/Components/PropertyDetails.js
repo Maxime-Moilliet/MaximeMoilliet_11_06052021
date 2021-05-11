@@ -62,7 +62,7 @@ class PropertyDetails extends React.Component {
                         <Accordion title="Description" size="small">
                             <p>{property[0].description}</p>
                         </Accordion>
-                        <Accordion title="Description" size="small">
+                        <Accordion title="Équipements" size="small">
                             <ul>
                                 {property[0].equipments.map((equipment, index) => (
                                     <li key={index}>{equipment}</li>
