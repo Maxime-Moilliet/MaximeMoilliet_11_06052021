@@ -58,7 +58,7 @@ class PropertyDetails extends React.Component {
                             </div>
                         </div>
                     </section>
-                    <section className="accordion double">
+                    <div className="accordion double">
                         <Accordion title="Description" size="small">
                             <p>{property[0].description}</p>
                         </Accordion>
@@ -69,7 +69,7 @@ class PropertyDetails extends React.Component {
                                 ))}
                             </ul>
                         </Accordion>
-                    </section>
+                    </div>
                 </>}
             </main>
             }

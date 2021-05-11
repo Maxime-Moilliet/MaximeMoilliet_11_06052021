@@ -33,7 +33,7 @@ export class ImageSlider extends React.Component {
         const { current, navigation } = this.state;
         const { pictures } = this.props;
         return (
-            <section className="imageSlider">
+            <div className="imageSlider">
                 {navigation && <>
                     <ArrowLeft onHandleClick={this.prevSlide} />
                     <ArrowRight onHandleClick={this.nextSlide} /></>
@@ -44,7 +44,7 @@ export class ImageSlider extends React.Component {
                         <img className="imageSlider__image" src={picture} alt={`${index}`} />
                     </div>
                 ))}
-            </section>
+            </div>
         );
     }
 }
