@@ -22,7 +22,7 @@ class PropertyDetails extends React.Component {
         this.setState({loading: true});
         const property = getOnePropertyById(id);
         if(property.length <= 0) {
-            this.props.history.push('/');
+            this.props.history.push('/notfound');
         }
         this.setState({property: property, loading: false});
     }
