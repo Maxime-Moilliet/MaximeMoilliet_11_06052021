@@ -6,7 +6,7 @@ export class About extends React.Component {
     render () {
         return (
             <>
-            <Banner image="about">
+            <Banner image=".././images/banner-about.png" alt="bannière" >
                 <h1 className="banner__title Fake">Banner à propos</h1>
             </Banner>
             <main className="accordion__group">

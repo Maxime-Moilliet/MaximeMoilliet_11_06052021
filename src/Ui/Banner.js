@@ -3,9 +3,10 @@ import PropTypes from 'prop-types';
 
 export class Banner extends React.Component {
     render() {
-        const { children, image } = this.props
+        const { children, image, alt } = this.props
         return (
-            <section className={image === "home" ? "banner" : "banner about"}>
+            <section className="banner">
+                <img className="banner__img" src={image} alt={alt} />
                 {children}
             </section>
         );
@@ -15,4 +16,5 @@ export class Banner extends React.Component {
 Banner.propTypes = {
     children: PropTypes.node.isRequired,
     image: PropTypes.string.isRequired,
+    alt: PropTypes.string,
 }
